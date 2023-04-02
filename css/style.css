@@ -1,5 +1,6 @@
 *,
-*::after *::before {
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -23,7 +24,7 @@ a {
 }
 
 p {
-    margin: 0;
+    margin: 0px;
 }
 
 body {
@@ -206,8 +207,8 @@ body {
 .info__item-title {
     font-size: 16px;
     line-height: 19px;
+    margin: 0 0 10px;
     text-transform: uppercase;
-    margin: 0 10px;
 }
 
 .info__item-text {
@@ -263,6 +264,10 @@ body {
 
 .characteristics__descr {
     flex-basis: 285px;
+}
+
+.characteristics__title {
+    padding-left: 5px;
 }
 
 .slider {
@@ -346,7 +351,7 @@ body {
 }
 
 .form__bike-price {
-    font-size: 32px;    
+    font-size: 32px;
     position: absolute;
     top: 30px;
     left: 0;
@@ -435,7 +440,7 @@ body {
     line-height: 15px;
 }
 
-.footer__social-link + .footer__social-link {
+.footer__social-link+.footer__social-link {
     margin-left: 26px;
 }
 
@@ -450,10 +455,79 @@ body {
     align-items: center;
 }
 
-.footer__contacts-link + .footer__contacts-link {
-    margin-top: 10px;    
-}  
+.footer__contacts-link+.footer__contacts-link {
+    margin-top: 10px;
+}
 
 .footer__contacts-img {
     margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+    .menu {
+        margin-right: 0
+    }
+
+}
+
+@media (max-width: 640px) {
+    .header__inner {
+        display: block;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top: 50px;
+    }
+
+    .menu__list {
+        justify-content: space-evenly;
+    }
+
+    .menu__item+.menu__item {
+        padding-left: 0;
+    }
+
+    .menu__link {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .menu__list {
+        justify-content: space-between;
+    }
+
+    .menu__link {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 350px) {
+        .menu {
+            margin-top: 30px;
+        }
+        .menu__link {
+            font-size: 12px;
+        }
+}
+
+@media (max-width: 1100px) {
+    .bike__inner {
+        flex-wrap: wrap;
+    }
+    .bike__text {
+        max-width: 100%;
+    }
+    .bike {
+        padding: 0;
+    }
+    .bike__link {
+        margin-top: 30px;
+    }
+    .bike__column {
+        margin-bottom: 30px;
+    }
+
+
 }
